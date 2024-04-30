@@ -13,6 +13,7 @@ I am using the Hybrid encryption pattern here, in which, a unique symetric key i
 **How to install:**
 
 -   Install make tool and run the below command.
+-   `cp .env.example .env`
 -   `make init`
 
 **Scope & Technical Summary:**
