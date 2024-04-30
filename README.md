@@ -37,6 +37,9 @@ I am using the Hybrid encryption pattern here, in which, a unique symetric key i
 
 Due to time limitation, It was difficult to include more features like Login, Signup, PrivateKeySharing between multiple devices to enable communication from more than one device, etc.
 
+If you find any difficulty in running the messaging system, Kindly clear the browser cache.
+
 Kindly let me know if anything is not clear. I can do the screensharing and can explain each part of the application.
+
 
 Thanks
