@@ -6,6 +6,11 @@ use App\Models\Room;
 
 class RoomController extends BaseController
 {
+    /**
+     * Responsible for render the rooms index page.
+     *
+     * @param Room $room
+     */
     public function view(Room $room)
     {
         return view('rooms.index', [
@@ -13,6 +18,11 @@ class RoomController extends BaseController
         ]);
     }
 
+    /**
+     * Responsible for show the join room form.
+     *
+     * @param string $token
+     */
     public function join(string $token)
     {
         $roomId = decrypt($token);

@@ -55,16 +55,6 @@ services:
     networks:
       - demo-network
 
-  mailhog:
-    image: mailhog/mailhog
-    container_name: DEMO_MAILHOG
-    restart: unless-stopped
-    ports:
-      - 1025:1025
-      - 8083:8025
-    networks:
-      - demo-network
-
 # Docker Networks
 networks:
   demo-network:

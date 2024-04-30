@@ -2,12 +2,9 @@
 
 namespace App\Providers;
 
-use App\Models\RoomMessage;
-use App\Observers\RoomMessageObserver;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
-use Illuminate\Support\Facades\Event;
 
 class EventServiceProvider extends ServiceProvider
 {
@@ -20,15 +17,6 @@ class EventServiceProvider extends ServiceProvider
         Registered::class => [
             SendEmailVerificationNotification::class,
         ],
-    ];
-
-    /**
-     * The model observers to register.
-     *
-     * @var array<string, string|object|array<int, string|object>>
-     */
-    protected $observers = [
-        RoomMessage::class => RoomMessageObserver::class
     ];
 
     /**

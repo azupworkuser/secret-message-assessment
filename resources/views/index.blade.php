@@ -10,9 +10,6 @@
             <input type="hidden" name="identifier" />
             <input type="hidden" name="private_key" />
             <x-register-fields />
-            <div class="col-12">
-                <button class="btn btn-primary submit-form" type="button">Submit form</button>
-            </div>
         </form>
     </div>
 </div>
@@ -31,9 +28,12 @@
         window.location.replace(window.Store.getRoomUrl());
     }
 
-    $('button.submit-form').click(function() {
-        window.Store.setPrivateKey($('input[name="private_key"]').val());
-        $('form.registration').submit();
+    $('form.registration').submit(function(event) {
+        event.preventDefault();
+        if ($(this)[0].checkValidity()) {
+            window.Store.setPrivateKey($('input[name="private_key"]').val());
+            event.currentTarget.submit();
+        }
     });
 </script>
 @endpush

@@ -11,7 +11,7 @@
     </div>
     <x-main-footer />
     <script type="text/javascript">
-        var forms = document.querySelectorAll('.needs-validation')
+        var forms = document.querySelectorAll('.needs-validation');
 
         Array.prototype.slice.call(forms)
             .forEach(function(form) {

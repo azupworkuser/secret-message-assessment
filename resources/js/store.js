@@ -61,6 +61,7 @@ const getRoomUrl = () => {
     return localStorage.getItem('room_url');
 }
 
+// Flush the local storage data.
 const flush = () => {
     setPrivateKey(null);
     setUserId(null);

@@ -12,11 +12,16 @@ use Illuminate\Support\Facades\URL;
 
 class RegisterController extends BaseController
 {
+    /**
+     * Responsible to register the users while initiating the messages
+     * @param RegisterRequest $request
+     */
     public function register(RegisterRequest $request)
     {
         $user = new User($request->validated());
         $user->save();
 
+        /** Creating messaging room and adding members into it*/
         $faker = Faker::create();
         $room = new Room([
             'title' => $faker->company()
@@ -33,6 +38,10 @@ class RegisterController extends BaseController
             ->with('room_url', URL::route('rooms.index', ['room' => $room]));
     }
 
+    /**
+     * Reigstering the rooms
+     * @param RegisterRoomRequest $request
+     */
     public function registerRoom(RegisterRoomRequest $request)
     {
         $room = Room::findOrFail($request->room_id);
