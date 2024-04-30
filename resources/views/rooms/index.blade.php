@@ -43,7 +43,7 @@
                 <option value="3">Expire in 10 Days</option>
                 <option value="4">Expire in 30 Days</option>
             </select>
-            <button class="btn btn-outline-success" type="submit">Send</button>
+            <button class="btn btn-outline-success mx-2" type="submit">Send</button>
         </form>
     </div>
     @endif
